@@ -100,20 +100,3 @@ If the website URL provided is invalid, an error message will be prompted for yo
 >> Cannot resolve URL. Please provide a valid URL.
 ```
 
-
-### dyld Error
-**Issue**: Not able to run Purple HATS due to the following error shown below
-```shell
-dyld: lazy symbol binding failed: Symbol not found: __ZN2v87Isolate37AdjustAmountOfExternalAllocatedMemoryEx
-  Referenced from: <user_path>/purple-hats/node_modules/libxmljs/build/Release/xmljs.node
-  Expected in: flat namespace
-
-dyld: Symbol not found: __ZN2v87Isolate37AdjustAmountOfExternalAllocatedMemoryEx
-  Referenced from: <user_path>/PURPLE_HATS/purple-hats/node_modules/libxmljs/build/Release/xmljs.node
-  Expected in: flat namespace
-
-zsh: abort      node index.js
-```
-**Solutions**: 
-1. Delete existing `node_modules` folder and re-install the NPM packages with `npm install`.
-3. Refer to this [GitHub issue](https://github.com/fsevents/fsevents/issues/313) for more alternative solutions
